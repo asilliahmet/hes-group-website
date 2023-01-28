@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
+nav {
+  backdrop-filter: blur(3px) brightness(80%);
+  position: fixed;
+  display: block;
+  left: var(--left);
+  top: 0px;
+  width: 20vw;
+  height: 100vh;
+  z-index: 2;
+  transition: left 0.5s;
+  display: flex;
+  font-size: var(--font);
+}
+
+.navtoggle {
+  width: 35px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.489);
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  cursor: default;
+  z-index: 5;
+}
+
+.navtoggle span {
+  transition: rotate 0.5s;
+}
+
+.navactive span {
+  rotate: 180deg;
+}
+
+.navactive {
+  left: 0px;
+}
+
+.navitems {
+  margin: 0px;
+  padding-left: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5vh;
+  font-weight:lighter;
+  height: 100vh;
+  position: absolute;
+  z-index: 4;
+}
+
+.navitems li {
+  transition: opacity 0.8s ease-out;
+  font-family: 'Forum', cursive;
+  color: white;
+  cursor: pointer;
+}
+
+.navitems:hover > li{
+  opacity: 0.4;
+}
+
+.navitems li:hover {
+  opacity: 1;
+}
+
+#navbg {
+  transition: top 3s cubic-bezier(.17,.84,.44,1);
+  position: absolute;
+  width: 160%;
+  z-index: 3;
+  opacity: 0.1;
+  left: -30%;
+  filter: drop-shadow(2px -2px 1px rgba(0, 0, 255, 0.556)) drop-shadow(-2px 2px 1px rgba(255, 0, 0, 0.447)) blur(1px);
+  top: 40%;
+}

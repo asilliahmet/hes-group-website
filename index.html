@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/navstyle.css">
+  <script src="./script/navsizing.js" defer></script>
+  <script src="./script/navhover.js" defer></script>
+</head>
+
+<body>
+  <nav>
+    <div>
+      <svg id="navbg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <path
+              fill="white"
+              d="M 19.38,63.85
+                 C 25.47,75.78 33.98,92.98 34.65,96.98
+                   34.70,97.26 34.64,97.26 34.69,96.98
+                   35.74,90.73 56.07,51.96 56.09,52.02
+                   61.03,40.54 62.25,28.72 59.51,19.47
+                   59.46,19.45 19.42,63.88 19.38,63.85 Z
+                 M 12.84,51.04
+                 C 12.97,51.37 13.11,51.70 13.25,52.02
+                   13.26,52.00 15.34,55.96 18.21,61.56
+                   18.18,61.52 42.27,34.68 42.22,34.67
+                   41.56,35.22 40.84,35.69 40.07,36.07
+                   38.10,37.06 36.36,37.37 34.18,37.34
+                   33.39,37.34 32.36,37.13 31.59,36.93
+                   30.00,36.52 28.58,35.79 27.38,34.84
+                   27.39,34.85 12.85,51.05 12.84,51.04 Z
+                 M 43.17,17.33
+                 C 46.90,21.21 47.56,27.20 44.79,31.73
+                   44.81,31.78 58.40,16.47 58.44,16.47
+                   56.96,12.94 54.81,9.90 51.98,7.54
+                   52.00,7.56 43.19,17.33 43.17,17.33 Z
+                 M 15.01,9.83
+                 C 7.32,18.54 6.44,33.52 11.83,48.43
+                   11.81,48.44 25.59,33.06 25.58,33.05
+                   22.93,29.76 22.09,25.07 23.86,20.92
+                   24.20,20.13 24.63,19.38 25.13,18.68
+                   25.14,18.70 15.01,9.83 15.01,9.83 Z
+                 M 26.85,16.76
+                 C 27.92,15.81 29.16,15.05 30.52,14.54
+                   31.64,14.11 32.47,13.99 33.64,13.80
+                   33.64,13.80 35.07,13.80 35.07,13.80
+                   36.35,13.79 37.98,14.16 39.17,14.64
+                   39.82,14.90 40.49,15.25 41.11,15.65
+                   41.15,15.64 49.77,5.92 49.77,5.93
+                   45.88,3.47 40.96,2.11 34.97,2.21
+                   34.87,2.22 34.46,2.22 34.35,2.21
+                   26.89,2.09 21.09,4.24 16.88,7.96
+                   16.90,7.94 26.87,16.78 26.85,16.76 Z" />
+      </svg>
+      <ul class="navitems">
+        <li data-bg="-2">Kurumsal</li>
+        <li data-bg="-1">Hizmetler</li>
+        <li data-bg="-0.5">Teklif Al</li>
+        <li data-bg="0.5">Kariyer</li>
+        <li data-bg="1">Medya</li>
+        <li data-bg="2">İletişim</li>
+      </ul>
+    </div>
+    <div class="navtoggle" onclick="document.querySelector('nav').classList.toggle('navactive')"><span>▶</span></div>
+  </nav>
+  <div class="page" id="welcome">
+    <div class="filter">
+      <div class="pagecontent">
+        <svg class="complogo" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" width="100px">
+          <use href="./images/heslogo-text.svg#logo-text" />
+        </svg>
+        <div id="hizmetformu">
+          <h3>Hemen teklif al!</h3>
+            <div id="picker">
+              <span onclick="for(let all of document.querySelectorAll('.picked')){all.classList.remove('picked')};this.classList.toggle('picked')">Asfalt</span>
+              <span>●</span>
+              <span onclick="for(let all of document.querySelectorAll('.picked')){all.classList.remove('picked')};this.classList.toggle('picked')">Nakliye</span>
+            </div>
+            <input type="text" placeholder="Ad Soyad">
+            <input type="text" placeholder="Telefon Numarası">
+            <input type="text" placeholder="E-Posta Adresi">
+            <input type="text" placeholder="Talebinizi Yazınız">
+            <button>Gönder</button>
+        </div>
+        <div class="textbox">
+          <h1>1972'den Beri Sizlerle...</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat facilis incidunt quasi odit rem eos accusamus necessitatibus fugit reiciendis autem!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
